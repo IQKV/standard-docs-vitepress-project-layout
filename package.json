@@ -9,7 +9,7 @@
     "docs:preview": "vitepress preview docs",
     "formatter:check": "oxfmt --check",
     "formatter:write": "oxfmt --write",
-    "lint": "pnpm formatter:check",
+    "lint": "oxfmt --write",
     "lint:stylelint": "stylelint \"**/*.css\" --aei",
     "node_modules:cleanup": "rm -rf node_modules",
     "prepare": "husky",
@@ -39,7 +39,7 @@
   },
   "lint-staged": {
     "*": [
-      "pnpm formatter:check"
+      "oxfmt --write"
     ],
     "package.json": [
       "sort-package-json"

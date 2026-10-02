@@ -114,6 +114,36 @@ When adding new pages:
 
 ---
 
+## Execution Discipline
+
+- Root cause first. Fix the real entry point, not a workaround.
+- Read the relevant docs and config files before editing. Do not assume current state.
+- After two identical failures without new evidence, change approach — do not retry blindly.
+- No speculative additions. Add content or config only when directly required by the request.
+
+## Security
+
+- Keep credentials and tokens out of commits, logs, and shared text.
+- Do not commit `.env` files. Use `.env.example` for documentation.
+- Flag unusual package names before installing. Use exact or pinned versions.
+- Never bypass `--no-verify` unless explicitly requested.
+
+## Commit Standards
+
+Format: `type(scope): subject`
+
+- Subject: imperative, lowercase, no trailing period, ≤ 72 chars
+- Types: `feat`, `fix`, `docs`, `style`, `chore`, `ci`, `revert`
+- Scope: affected area (e.g., `sidebar`, `config`, `theme`, `deps`, `ci`)
+- For `fix`: describe the symptom and trigger, not the code change
+  - ✅ `fix(sidebar): active link not highlighted on deep route navigation`
+  - ❌ `fix(sidebar): update active class logic`
+
+Examples:
+- `feat(sidebar): add collapsible section for API reference`
+- `chore(deps): update vitepress to latest`
+- `docs: add getting started guide`
+
 ## AI Agent Behavior
 
 - Use the `docs-architect` agent for generating or restructuring documentation.
