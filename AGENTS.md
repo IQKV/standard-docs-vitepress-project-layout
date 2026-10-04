@@ -140,6 +140,7 @@ Format: `type(scope): subject`
   - ❌ `fix(sidebar): update active class logic`
 
 Examples:
+
 - `feat(sidebar): add collapsible section for API reference`
 - `chore(deps): update vitepress to latest`
 - `docs: add getting started guide`
